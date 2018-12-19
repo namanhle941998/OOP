@@ -1,0 +1,10 @@
+Hanoi
+Beijing
+Paris
+London
+Washington
+Moscow
+Sydney
+Toronto
+Madrid
+Roma

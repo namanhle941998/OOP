@@ -1,0 +1,10 @@
+held
+postponed
+canceled
+planned
+host
+organized
+delayed
+arranged
+rescinded
+announced
