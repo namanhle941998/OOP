@@ -9,7 +9,7 @@ public class DateGenerator {
 		for (int i = 1; i <= count; i++) {
 			String day;
 			int date = 0;
-			int year = r.nextInt(19) + 2000;
+			int year = r.nextInt(39) + 1980;
 			int month = r.nextInt(12) + 1;
 			switch(month) {
 			case 1:

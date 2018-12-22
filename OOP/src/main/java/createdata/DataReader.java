@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class DataReader {
-	public static ArrayList<String> readFile(String filename, int startLine, int endLine){
+	public static ArrayList<String> readFile(String filename, int startLine, int count){
 		ArrayList<String> array = new ArrayList<String>();
 		String line = null;
 		try {
@@ -18,7 +18,7 @@ public class DataReader {
 				line = bufferedReader.readLine();
 			}
 			int j = 0;
-			for (int i = startLine - 1; i < startLine + endLine - 1; i++) {
+			for (int i = startLine - 1; i < startLine + count - 1; i++) {
 				line = bufferedReader.readLine();
 				array.add(j, line);
 				j++;
