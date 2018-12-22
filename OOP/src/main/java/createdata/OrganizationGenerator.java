@@ -3,6 +3,16 @@ package createdata;
 import java.util.ArrayList;
 
 public class OrganizationGenerator {
+	private static int count = 100;// the number of organizations in data file
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
 	public static ArrayList<entity.Organization> generateOrganizations(int count, int start){
 		ArrayList<entity.Organization> organizations = new ArrayList<entity.Organization>();
 		ArrayList<String> organizationsLabel = new ArrayList<String>();

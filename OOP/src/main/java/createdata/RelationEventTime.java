@@ -6,6 +6,42 @@ public class RelationEventTime {
 	public entity.Event event;
 	public entity.Time time;
 	private String relation;
+	private static int count = 1;// the number of predicates in data file
+	private static int countO = 100;// the number of objects (which is Time entity) to be created
+	private static int jumpP = 1;// the number of predicates used in each query when adding relation to the database
+	private static int jumpS = 100;// the number of subjects used in each query when adding relation to the database
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
+	public static int getCountO() {
+		return countO;
+	}
+	
+	public static void setCountO(int value) {
+		countO = value;
+	}
+	
+	public static int getJumpP() {
+		return jumpP;
+	}
+	
+	public static void setJumpP(int value) {
+		jumpP = value;
+	}
+	
+	public static int getJumpS() {
+		return jumpS;
+	}
+	
+	public static void setJumpS(int value) {
+		jumpS = value;
+	}
 	
 	public RelationEventTime(entity.Event event, entity.Time time, String relation) {
 		this.event = event;

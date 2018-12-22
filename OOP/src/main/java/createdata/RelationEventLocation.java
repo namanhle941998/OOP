@@ -6,6 +6,43 @@ public class RelationEventLocation {
 	public entity.Event event;
 	public entity.Location location;
 	private String relation;
+	private static int count = 1;// the number of predicates in data file
+	private static int jumpP = 1;// the number of predicates used in each query when adding relation to the database
+	private static int jumpS = 100;// the number of subjects used in each query when adding relation to the database
+	private static int jumpO = 10;// the number of objects used in each query when adding relation to the database
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
+	public static int getJumpP() {
+		return jumpP;
+	}
+	
+	public static void setJumpP(int value) {
+		jumpP = value;
+	}
+	
+	public static int getJumpS() {
+		return jumpS;
+	}
+	
+	public static void setJumpS(int value) {
+		jumpS = value;
+	}
+	
+	public static int getJumpO() {
+		return jumpO;
+	}
+	
+	public static void setJumpO(int value) {
+		jumpO = value;
+	}
+	
 	
 	public RelationEventLocation(entity.Event event, entity.Location location, String relation) {
 		this.event = event;

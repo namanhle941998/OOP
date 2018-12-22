@@ -3,6 +3,16 @@ package createdata;
 import java.util.ArrayList;
 
 public class LocationGenerator {
+	private static int count = 10;// the number of locations in data file
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
 	public static ArrayList<entity.Location> generateLocations(int count, int start){
 		ArrayList<entity.Location> locations = new ArrayList<entity.Location>();
 		ArrayList<String> locationsLabel = new ArrayList<String>();

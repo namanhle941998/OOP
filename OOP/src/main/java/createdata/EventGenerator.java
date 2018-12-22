@@ -3,6 +3,16 @@ package createdata;
 import java.util.ArrayList;
 
 public class EventGenerator {
+	private static int count = 100;// the number of events in data file
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
 	public static ArrayList<entity.Event> generateEvents(int count, int start){
 		ArrayList<entity.Event> events = new ArrayList<entity.Event>();
 		ArrayList<String> eventsLabel = new ArrayList<String>();

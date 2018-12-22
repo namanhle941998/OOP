@@ -3,6 +3,16 @@ package createdata;
 import java.util.ArrayList;
 
 public class PeopleGenerator {
+	private static int count = 50;// the number of people in data file
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
 	public static ArrayList<entity.Person> generatePeople(int count, int start){
 		ArrayList<entity.Person> people = new ArrayList<entity.Person>();
 		ArrayList<String> peopleLabel = new ArrayList<String>();

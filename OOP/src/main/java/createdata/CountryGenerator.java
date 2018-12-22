@@ -3,6 +3,16 @@ package createdata;
 import java.util.ArrayList;
 
 public class CountryGenerator {
+	private static int count = 100;// the number of countries in data file
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void setCount(int value) {
+		count = value;
+	}
+	
 	public static ArrayList<entity.Country> generateCountries(int count, int start){
 		ArrayList<entity.Country> countries = new ArrayList<entity.Country>();
 		ArrayList<String> countriesLabel = new ArrayList<String>();
