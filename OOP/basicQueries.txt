@@ -1,10 +1,10 @@
-select ?output where{?person <http://xmlns.com/foaf/0.1/hasCareer> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Vladimir_Putin>.}
-select ?output where{?country <http://xmlns.com/foaf/0.1/hasDescription> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Viet_Nam>.}
-select ?output where{?country <http://xmlns.com/foaf/0.1/held> ?event; <http://xmlns.com/foaf/0.1/hasName> ?output. ?event <http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/World_Cup_2030>.}
-select ?output where{?organization <http://xmlns.com/foaf/0.1/held_an_exhibition_of_products_in> ?date;<http://xmlns.com/foaf/0.1/hasName> ?output.filter(regex(str(?date), '5/7/2014'))}
-select ?output where{?person <http://xmlns.com/foaf/0.1/hasDescription> <http://dbpedia.org/resource/Prime_Minister_of_Viet_Nam>;<http://xmlns.com/foaf/0.1/hasName> ?output.}
-select ?output where{?organization <http://xmlns.com/foaf/0.1/held_an_introduction_of_new_product_in> ?country;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Samsung>.?country <http://xmlns.com/foaf/0.1/hasName> ?output.}
-select ?output where{?event <http://xmlns.com/foaf/0.1/is_held_in> ?location;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Olympics_2040>.?location <http://xmlns.com/foaf/0.1/hasName> ?output.}
-select ?output where{?person <http://xmlns.com/foaf/0.1/hasLink> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Nguyen_Xuan_Phuc>.}
-select ?output where{?organization <http://xmlns.com/foaf/0.1/hasDate> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Facebook>.}
-select ?output where{?person <http://xmlns.com/foaf/0.1/host> ?event;<http://xmlns.com/foaf/0.1/hasName> ?output.?event <http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Miss_Universe_2020>.}
+select distinct ?output where{?person <http://xmlns.com/foaf/0.1/hasCareer> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Vladimir_Putin>.}
+select distinct ?output where{?country <http://xmlns.com/foaf/0.1/hasDescription> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Viet_Nam>.}
+select distinct ?output where{?country <http://xmlns.com/foaf/0.1/held> ?event; <http://xmlns.com/foaf/0.1/hasName> ?output. ?event <http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/World_Cup_2030>.}
+select distinct ?output where{?organization <http://xmlns.com/foaf/0.1/held_an_exhibition_of_products_in> ?date;<http://xmlns.com/foaf/0.1/hasName> ?output.filter(regex(str(?date), '5/7/2014'))}
+select distinct ?output where{?person <http://xmlns.com/foaf/0.1/hasDescription> <http://dbpedia.org/resource/Prime_Minister_of_Viet_Nam>;<http://xmlns.com/foaf/0.1/hasName> ?output.}
+select distinct ?output where{?organization <http://xmlns.com/foaf/0.1/held_an_introduction_of_new_product_in> ?country;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Samsung>.?country <http://xmlns.com/foaf/0.1/hasName> ?output.}
+select distinct ?output where{?event <http://xmlns.com/foaf/0.1/is_held_in> ?location;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Olympics_2040>.?location <http://xmlns.com/foaf/0.1/hasName> ?output.}
+select distinct ?output where{?person <http://xmlns.com/foaf/0.1/hasLink> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Nguyen_Xuan_Phuc>.}
+select distinct ?output where{?organization <http://xmlns.com/foaf/0.1/hasDate> ?output;<http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Facebook>.}
+select distinct ?output where{?person <http://xmlns.com/foaf/0.1/host> ?event;<http://xmlns.com/foaf/0.1/hasName> ?output.?event <http://xmlns.com/foaf/0.1/hasName> <http://dbpedia.org/resource/Miss_Universe_2020>.}

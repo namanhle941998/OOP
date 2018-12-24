@@ -4,54 +4,21 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 
 public class Execution {
 	public static void main(String[] args) {
+		//setup
 		RepositoryConnection repositoryConnection = null;
+		InsertDataToGraphDB.setRepositiory("OOP");
+		SelectDataFromGraphDB.setRepositiory("OOP");
 		repositoryConnection = InsertDataToGraphDB.getRepositoryConnection();
 		
-		//create original entities(fast)
 		
-		//InsertDataToGraphDB.insertOriginalEntities(repositoryConnection);
 		
-		//create additional entities to enlarge the scale of database, based on original entities
-		//create additional events(about 6-7 minutes)
-		//InsertDataToGraphDB.insertAdditionalEvents(repositoryConnection);
+		//create mass entities, only allows a number greater than or equal 5000000 and a multiple of 1000000
+		InsertDataToGraphDB.insertEntityAsRequest(repositoryConnection, 5000000);
 		
-		//create additional countries(about 6-7 minutes)
-		//InsertDataToGraphDB.insertAdditionalCountries(repositoryConnection);
+		//create mass relations, only allows a number greater than or equal 5000000 and a multiple of 1000000
+		InsertDataToGraphDB.insertRelationAsRequest(repositoryConnection, 5000000);
 		
-		//create additional people(about 3-4 minutes)
-		//InsertDataToGraphDB.insertAdditionalPeople(repositoryConnection);
-		
-		//create additional organizations(about 6-7 minutes)
-		//InsertDataToGraphDB.insertAdditionalOrganizations(repositoryConnection);
-		
-		//create additional locations(about 40-50 seconds)
-		//InsertDataToGraphDB.insertAdditionalLocations(repositoryConnection);
-		
-		//create relations
-		//create relations of event-time
-		//InsertDataToGraphDB.insertRelationET(repositoryConnection, 1000000);
-
-		//create relations of organization-time
-		//InsertDataToGraphDB.insertRelationOT(repositoryConnection, 1000000);
-		
-		//create relations of country-event
-		//InsertDataToGraphDB.insertRelationCE(repositoryConnection);
-		
-		//create relations of event-location
-		//InsertDataToGraphDB.insertRelationEL(repositoryConnection);
-
-		//create relations of organization-country
-		//InsertDataToGraphDB.insertRelationOC(repositoryConnection);
-		
-		//create relations of person-country
-		//InsertDataToGraphDB.insertRelationPC(repositoryConnection);
-		
-		//create relations of person-event
-		//InsertDataToGraphDB.insertRelationPE(repositoryConnection);
-		
-		//create relations of person-location
-		//InsertDataToGraphDB.insertRelationPL(repositoryConnection);
-		
+		//query
 		SelectDataFromGraphDB.queryAsRequest(repositoryConnection);
 		repositoryConnection.close();
 	}
